@@ -90,11 +90,13 @@
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
+          window.alert("Staunch");
           // ...
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
+          window.alert("Failed");
         });
     }
 // [END auth_signin_password_modular]
