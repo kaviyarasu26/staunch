@@ -63,7 +63,8 @@
     // 'npm run snippets'.
 
     // [START auth_signup_password_modular]
-    import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+    //import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+    import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
@@ -84,7 +85,7 @@
     // 'npm run snippets'.
 
     // [START auth_signin_password_modular]
-    import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+    
 
     function signin(auth, email, password) {
       signInWithEmailAndPassword(auth, email, password)
