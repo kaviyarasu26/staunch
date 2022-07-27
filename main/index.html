@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        li {
+            display: inline;
+            padding: 10px;
+        }
+
+        .top {
+            color: white;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #display-image {
+            width: 400px;
+            height: 225px;
+            border: 1px solid black;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top ">
+
+        <div class="left">
+            <ul type="none">
+                <li>main</li>
+                <li>pre</li>
+                <li> profile</li>
+            </ul>
+        </div>
+        <div class="right">
+            <span style="text-align:center ;">Kavi</span>
+            <img src="a1.jpg" style="width: 30px; height: 30px;border-radius:50%;">
+
+        </div>
+
+    </div>
+    <div class="main">
+        <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+
+        <div id="display-image"></div>
+        <label>name</label>
+        <input type="text" placeholder="name"><br>
+        <label>Choose </label>
+<select id="division" name="divisionlist" >
+  <option value="div1">army</option>
+  <option value="div2">navy</option>
+  <option value="div3">air</option>
+</select>
+<br>
+      <textarea></textarea>
+      <br>
+      <button class="submit">submit</button>
+
+
+    </div>
+    <script>
+        const image_input = document.querySelector("#image-input");
+
+        image_input.addEventListener("change", function () {
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                const uploaded_image = reader.result;
+                document.querySelector("#display-image").style.backgroundImage = `url(${uploaded_image})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
