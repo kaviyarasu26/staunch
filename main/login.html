@@ -22,7 +22,7 @@
         <input type="password" name="" required="" id="up">
         <label>Password</label>
       </div>
-      <a  onclick="sign1()">
+      <a  onclick=" signInWithEmailPassword()">
         <span></span>
         <span></span>
         <span></span>
@@ -131,7 +131,7 @@
           .then((userCredential) => {
             console.log("Signed in");
             window.alert("Success");
-            var user = userCredential.user;
+            window.location.replace('./index.html');
           })
           .catch((error) => {
             var errorCode = error.code;
