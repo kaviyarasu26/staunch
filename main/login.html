@@ -31,11 +31,14 @@
       </a>
     </form>
   </div>
-  <script type="module">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script >
     console.log("K1")
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+    
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -64,7 +67,6 @@
 
     // [START auth_signup_password_modular]
     //import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-    import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
