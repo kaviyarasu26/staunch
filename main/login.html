@@ -130,9 +130,10 @@
 
         firebase.auth().signInWithEmailAndPassword(email, password)
           .then((userCredential) => {
+            console.log(userCredential);
             console.log("Signed in");
             window.alert("Success");
-            window.location.replace('./index.html');
+           // window.location.replace('./index.html');
           })
           .catch((error) => {
             var errorCode = error.code;
