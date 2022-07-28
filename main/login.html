@@ -22,7 +22,7 @@
         <input type="password" name="" required="" id="up">
         <label>Password</label>
       </div>
-      <a  onclick="signInWithEmailPassword()">
+      <a  onclick="signin()">
         <span></span>
         <span></span>
         <span></span>
@@ -36,7 +36,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
   <script>
-    console.log("K5");
+    console.log("K6");
     // Import the functions you need from the SDKs you need
 
     // TODO: Add SDKs for Firebase products that you want to use
@@ -122,7 +122,7 @@
           var errorMessage = error.message;
           window.alert(errorMessage);
         });
-      function signInWithEmailPassword() {
+      function signin() {
 
         var email = document.getElementById("un").value;
         var password = document.getElementById("up").value;
